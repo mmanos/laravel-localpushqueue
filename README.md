@@ -43,8 +43,10 @@ Update the existing `queue.php` config file and add a new `local` array to the e
 
 Then update the `default` queue driver to be `local`.
 
-Finally, ensure you have a route defined to listen for your pushed jobs:
+Next, ensure you have a route defined to listen for your pushed jobs:
 
 ```php
 Route::post('queue/receive', function() { return Queue::marshal(); });
 ```
+
+Finally, since this driver makes a request to the URL used by your application, make sure your server can resolve the hostname defined in the `url` config value. On a dev server you may need to ensure your local hostname is in your machine's `hosts` file.
