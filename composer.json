@@ -1,0 +1,25 @@
+{
+    "name": "mmanos/laravel-localpushqueue",
+    "description": "A local push queue driver for Laravel 4.",
+    "keywords": ["laravel", "queue", "push", "local"],
+    "authors": [
+        {
+            "name": "Mark Manos",
+            "email": "mark@airpac.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.*"
+    },
+    "suggest": {
+        "aws/aws-sdk-php": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mmanos\\LocalPushQueue\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "license": "MIT"
+}
